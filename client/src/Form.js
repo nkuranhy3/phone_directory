@@ -75,6 +75,9 @@ class Form extends Component {
                         <button type="submit" onClick={this.onSubmit} id="submitButton">Submit</button>
 
                     </div>
+
+                    Name: {this.state.name}
+                    Phone: {this.state.phone}
                 </form>
                 <pre>
                     <table>
