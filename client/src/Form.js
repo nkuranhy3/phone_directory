@@ -58,10 +58,23 @@ class Form extends Component {
             <div className="">
                 <button id="addNewButton" onClick={this.onAddNew}>Add New</button>
                 <form ref="mainForm" className="mainForm" id="mainForm">
-                    <input ref="name" type="text" placeholder="Name" className="formField" />
+                    <div>
+                        <label>Name:</label>
+                        <br />
+                        <input ref="name" type="text" placeholder="Name" required/>
 
-                    <input ref="phone" type="text" placeholder="Phone" className="formField" />
-                    <button type="submit" onClick={this.onSubmit} className="button">Submit</button>
+                    </div>
+                    <div>
+                        <label>Phone:</label>
+                        <br />
+                        <input ref="phone" type="tel" placeholder="Phone" required/>
+
+                    </div>
+                    <br />
+                    <div>
+                        <button type="submit" onClick={this.onSubmit} id="submitButton">Submit</button>
+
+                    </div>
                 </form>
                 <pre>
                     <table>
@@ -78,7 +91,7 @@ class Form extends Component {
                                 <tr key={i}>
                                     <td>{data.name}</td>
                                     <td>{data.phone}</td>
-                                    <td> <button onClick={() => this.onRemove(i)} className="remove">Delete</button></td>
+                                    <td> <button onClick={() => this.onRemove(i)} id="remove">Delete</button></td>
                                 </tr>
 
                             )}
